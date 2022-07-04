@@ -128,16 +128,18 @@ const buttonContent = [
 ];
 const Sidebar = () => {
   return (
-    <div className="w-[86px] p-5 flex-col space-y-2 fixed top-52">
-      {buttonContent.map((content) => (
-        <button className="flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-[#f2f3f5] rounded-full p-4 stroke-gray-700 hover:bg-[#0563bb] hover:stroke-white hover:max-w-[156px] justify-center items-center content-center ">
-          {content.icon}
-          <h5 className="hidden group-hover:block text-white transition-all ease-in-out delay-150 ">
-            {content.title}
-          </h5>
-        </button>
-      ))}
-    </div>
+    <header className="flex-none w-[86px]">
+      <div className="p-5 flex-col space-y-2 fixed py-44">
+        {buttonContent.map((content) => (
+          <button className="flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-[#f2f3f5] rounded-full p-4 stroke-gray-700 hover:bg-[#0563bb] hover:stroke-white hover:max-w-[156px] justify-center items-center content-center ">
+            {content.icon}
+            <h5 className="hidden group-hover:block text-white transition-all ease-in-out delay-150 ">
+              {content.title}
+            </h5>
+          </button>
+        ))}
+      </div>
+    </header>
   );
 };
 
