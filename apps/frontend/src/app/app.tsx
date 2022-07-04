@@ -1,15 +1,12 @@
-import styled from 'styled-components';
-import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
+import Sidebar from './Components/Sidebar';
+import Main from './Pages/Main';
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="frontend" />
-    </StyledApp>
+    <>
+      <Sidebar />
+      <Main />
+    </>
   );
 }
 
