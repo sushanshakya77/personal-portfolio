@@ -19,6 +19,7 @@ const buttonContent = [
         <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
       </svg>
     ),
+    active: 'bg-indigo-700',
   },
   {
     title: 'About',
@@ -131,7 +132,7 @@ const Sidebar = () => {
         {buttonContent.map((content) => (
           <button
             key={content.title}
-            className="flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-[#f2f3f5] rounded-full p-4 stroke-gray-700 hover:bg-[#0563bb] hover:stroke-white hover:max-w-[156px] justify-center items-center content-center "
+            className={`flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-200 rounded-full p-4 stroke-gray-700 hover:bg-indigo-600 hover:stroke-white hover:max-w-[156px] justify-center items-center content-center `}
           >
             {content.icon}
             <h5 className="hidden group-hover:block text-white transition-all ease-in-out delay-150 ">
