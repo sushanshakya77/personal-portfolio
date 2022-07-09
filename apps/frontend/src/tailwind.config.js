@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'sans-serif': ['Raleway', 'sans-serif'],
+    },
+
   },
   variants: {
     extend: {},
