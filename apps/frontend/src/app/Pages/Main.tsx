@@ -1,5 +1,6 @@
 import React from 'react';
 import About from './About';
+import Facts from './Facts';
 import Home from './Home';
 
 const Main = () => {
@@ -7,6 +8,7 @@ const Main = () => {
     <main className="flex-initial w-full">
       <Home />
       <About />
+      <Facts />
     </main>
   );
 };
