@@ -43,7 +43,7 @@ const About = () => {
   return (
     <section className="space-y-4 px-16 my-16 snap-end" id="#about">
       <div className="space-y-4">
-        <h2 className="text-3xl text-center text-[#45505b] font-semibold border-b-2 border-indigo-500 p-3 ">
+        <h2 className="text-3xl text-center text-[#45505b] font-semibold border-b-2 border-indigo-600 p-3 ">
           ABOUT
         </h2>
         <p className="text-center">
