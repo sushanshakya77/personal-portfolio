@@ -2,6 +2,7 @@ import React from 'react';
 import About from './About';
 import Facts from './Facts';
 import Home from './Home';
+import Skills from './Skills';
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <Home />
       <About />
       <Facts />
+      <Skills />
     </main>
   );
 };
