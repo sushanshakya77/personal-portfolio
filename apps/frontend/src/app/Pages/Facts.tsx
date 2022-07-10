@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from '../Components/Title';
 
 const facts = [
   {
@@ -82,19 +83,14 @@ const Facts = () => {
   return (
     <section className="space-y-8 px-16 my-16">
       <div className="space-y-4">
-        <h2 className="text-3xl text-center text-[#45505b] font-semibold border-b-2 border-indigo-600 p-3 ">
-          FACTS
-        </h2>
-        <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
-          saepe numquam. Iusto, a voluptatibus, delectus architecto quia vitae
-          animi facere quo assumenda earum cupiditate. Est iste eveniet at
-          tenetur quae.
-        </p>
+        <Title
+          title="Facts"
+          description="Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."
+        />
       </div>
       <div className="flex space-x-6">
         {facts.map((fact) => (
-          <div className="flex-col w-1/3 space-y-3">
+          <div className="flex-col w-1/3 space-y-3 ">
             <div key={fact.title} className="flex justify-center ">
               <div className=" bg-indigo-600 rounded-full p-2">{fact.icon}</div>
             </div>

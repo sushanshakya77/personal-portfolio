@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from '../Components/Title';
 import potrait1 from '../Images/potrait3.png';
 
 const firstInfo = [
@@ -43,15 +44,13 @@ const About = () => {
   return (
     <section className="space-y-4 px-16 my-16 snap-end" id="#about">
       <div className="space-y-4">
-        <h2 className="text-3xl text-center text-[#45505b] font-semibold border-b-2 border-indigo-600 p-3 ">
-          ABOUT
-        </h2>
-        <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+        <Title
+          title="About"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
           saepe numquam. Iusto, a voluptatibus, delectus architecto quia vitae
           animi facere quo assumenda earum cupiditate. Est iste eveniet at
-          tenetur quae.
-        </p>
+          tenetur quae."
+        />
       </div>
       <div className="flex space-x-6">
         <div className="flex-none w-[416px] ">
