@@ -8,9 +8,12 @@ interface ITitleProps {
 const Title = ({ title, description }: ITitleProps) => {
   return (
     <div className="space-y-4">
-      <h2 className="text-3xl text-center text-[#45505b] font-semibold border-b-2 border-indigo-600 p-3 uppercase">
-        {title}
-      </h2>
+      <div className="flex justify-center">
+        <h2 className="text-3xl text-[#45505b] font-sans-serif font-semibold border-b-2 border-indigo-600 p-3 uppercase">
+          {title}
+        </h2>
+      </div>
+
       <p className="text-center">{description}</p>
     </div>
   );

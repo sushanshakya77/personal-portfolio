@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../Components/Section';
 import Title from '../Components/Title';
-import potrait1 from '../Images/potrait3.png';
+import potrait1 from '../Images/resume3.jpg';
 
 const firstInfo = [
   {
@@ -49,9 +49,9 @@ const About = () => {
           tenetur quae."
       />
       <div className="flex space-x-6">
-        <div className="flex-none w-[416px] ">
+        <div className="flex-none w-[416px] overflow-hidden ">
           <img
-            className="h-[440px] w-[416px] object-cover"
+            className="h-[440px] w-[416px] object-cover hover:scale-125 transition-all duration-500 ease-in-out"
             src={potrait1}
             alt="about"
           />
