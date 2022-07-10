@@ -88,11 +88,7 @@ const socialMedia = [
 
 const Home = () => {
   return (
-    <section
-      className="h-screen bg-slate-100  flex justify-center items-center pl-28 relative"
-      style={{ backgroundImage: '../Images/potrait3.jpg' }}
-      id="#home"
-    >
+    <section className="h-screen bg-slate-100  flex justify-center items-center pl-28 relative">
       <div className="flex flex-col justify-center space-y-4 w-2/4 ">
         <h1 className=" text-slate-600 text-6xl font-bold font-sans-serif">
           Sushan Shakya
