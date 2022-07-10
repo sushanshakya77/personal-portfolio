@@ -1,4 +1,5 @@
 import React from 'react';
+import Section from '../Components/Section';
 import Title from '../Components/Title';
 
 const skills = [
@@ -31,16 +32,14 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="space-y-8 px-16 my-16">
-      <div className="space-y-4">
-        <Title
-          title="Skills"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+    <Section>
+      <Title
+        title="Skills"
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
           saepe numquam. Iusto, a voluptatibus, delectus architecto quia vitae
           animi facere quo assumenda earum cupiditate. Est iste eveniet at
           tenetur quae."
-        />
-      </div>
+      />
       <div>
         <div className="flex flex-wrap ">
           {skills.map((skill) => (
@@ -70,7 +69,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

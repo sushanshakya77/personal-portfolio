@@ -1,4 +1,5 @@
 import React from 'react';
+import Section from '../Components/Section';
 import Title from '../Components/Title';
 import potrait1 from '../Images/potrait3.png';
 
@@ -19,9 +20,6 @@ const firstInfo = [
     title: 'City',
     info: 'Swayambhu, Kathmandu',
   },
-];
-
-const secondInfo = [
   {
     title: 'Age',
     info: '21 years old',
@@ -42,16 +40,14 @@ const secondInfo = [
 
 const About = () => {
   return (
-    <section className="space-y-4 px-16 my-16 snap-end" id="#about">
-      <div className="space-y-4">
-        <Title
-          title="About"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+    <Section>
+      <Title
+        title="About"
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
           saepe numquam. Iusto, a voluptatibus, delectus architecto quia vitae
           animi facere quo assumenda earum cupiditate. Est iste eveniet at
           tenetur quae."
-        />
-      </div>
+      />
       <div className="flex space-x-6">
         <div className="flex-none w-[416px] ">
           <img
@@ -69,60 +65,34 @@ const About = () => {
             corrupti earum!
           </p>
           <div className="flex">
-            <div className="flex-col space-y-5 w-2/4">
+            <div className="flex flex-wrap ">
               {firstInfo.map((item) => (
-                <h3
-                  key={item.title}
-                  className="text-lg font-semibold text-slate-800 flex items-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-chevron-right"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="#5f37ef"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div className="py-3 w-2/4">
+                  <h3
+                    key={item.title}
+                    className="text-lg font-semibold text-slate-800 flex items-center"
                   >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <polyline points="9 6 15 12 9 18" />
-                  </svg>{' '}
-                  {item.title}:{'   '}
-                  <span className="text-base font-normal ml-2">
-                    {item.info}
-                  </span>
-                </h3>
-              ))}
-            </div>
-            <div className="flex-col space-y-5 w-2/4">
-              {secondInfo.map((item) => (
-                <h3
-                  key={item.title}
-                  className="text-lg font-semibold text-slate-800 flex items-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-chevron-right"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="#5f37ef"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <polyline points="9 6 15 12 9 18" />
-                  </svg>{' '}
-                  {item.title}:{'    '}
-                  <span className="text-base font-normal ml-2">
-                    {item.info}
-                  </span>
-                </h3>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon icon-tabler icon-tabler-chevron-right"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="#5f37ef"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <polyline points="9 6 15 12 9 18" />
+                    </svg>{' '}
+                    {item.title}:{'   '}
+                    <span className="text-base font-normal ml-2">
+                      {item.info}
+                    </span>
+                  </h3>
+                </div>
               ))}
             </div>
           </div>
@@ -137,7 +107,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
