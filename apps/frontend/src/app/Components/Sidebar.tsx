@@ -20,6 +20,9 @@ const buttonContent = [
       </svg>
     ),
     active: 'bg-indigo-700',
+    onClick: () => {
+      window.scrollTo(0, 5000);
+    },
   },
   {
     title: 'About',
@@ -132,7 +135,8 @@ const Sidebar = () => {
         {buttonContent.map((content) => (
           <button
             key={content.title}
-            className={`flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-200 rounded-full p-4 stroke-gray-700 hover:bg-indigo-600 hover:stroke-white hover:max-w-[156px] justify-center items-center content-center `}
+            className={`flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-200 rounded-full p-4 stroke-gray-700 hover:bg-indigo-600 hover:stroke-white hover:max-w-[156px] justify-center items-center  `}
+            onClick={content?.onClick}
           >
             {content.icon}
             <h5 className="hidden group-hover:block text-white transition-all ease-in-out delay-150 ">
