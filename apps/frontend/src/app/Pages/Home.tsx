@@ -103,11 +103,36 @@ const Home = () => {
               key={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="stroke-[#5e5c5c] hover:stroke-indigo-600 hover:scale-110 transition ease-in-out duration-200"
+              className="stroke-[#5e5c5c] hover:stroke-indigo-600 hover:scale-110 transition ease-in-out duration-200 "
             >
               {item.icon}
             </a>
           ))}
+          <a
+            href={potrait2}
+            className=" flex items-center group transition-all ease-in-out duration-200 rounded-full hover:bg-slate-200 stroke-[#5e5c5c] hover:stroke-indigo-600  "
+            download
+          >
+            <h4 className="hidden group-hover:block transition-all ease-in-out duration-200">
+              Download CV
+            </h4>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-download"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+              <polyline points="7 11 12 16 17 11" />
+              <line x1="12" y1="4" x2="12" y2="16" />
+            </svg>
+          </a>
         </div>
       </div>
       <div className="grow" />
@@ -117,20 +142,6 @@ const Home = () => {
           <img className="h-screen object-cover " src={potrait2} alt="bg" />
         </div>
       </div>
-      {/* <div className="flex-1 ">
-          
-          <svg
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-            className="blur-3xl"
-          >
-            <path
-              fill="#938ef3a7"
-              d="M32.2,-38.4C41.8,-30.4,49.6,-20.2,50.7,-9.6C51.9,1.1,46.4,12.4,39.3,20.9C32.2,29.4,23.5,35.1,12,44C0.5,53,-13.8,65.2,-24.2,63C-34.6,60.8,-41.1,44.1,-47,29.3C-53,14.5,-58.5,1.6,-59.7,-13.7C-60.8,-29.1,-57.5,-46.9,-46.9,-54.7C-36.2,-62.5,-18.1,-60.4,-3.4,-56.3C11.3,-52.3,22.7,-46.4,32.2,-38.4Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-        </div> */}
     </section>
   );
 };
