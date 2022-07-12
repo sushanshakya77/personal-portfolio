@@ -67,7 +67,7 @@ const About = () => {
           <div className="flex">
             <div className="flex flex-wrap ">
               {firstInfo.map((item) => (
-                <div className="py-3 w-2/4">
+                <div className="py-3 w-2/4" key={item.title}>
                   <h3
                     key={item.title}
                     className="text-lg font-semibold text-slate-800 flex items-center"
@@ -78,10 +78,10 @@ const About = () => {
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
-                      stroke-width="2"
+                      strokeWidth="2"
                       stroke="#5f37ef"
                       fill="none"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                       stroke-linejoin="round"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />

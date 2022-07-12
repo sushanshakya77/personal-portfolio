@@ -59,11 +59,11 @@ const facts = [
         width="40"
         height="40"
         viewBox="0 0 24 24"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         stroke="#ffffff"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <circle cx="12" cy="9" r="6" />
@@ -89,7 +89,7 @@ const Facts = () => {
       />
       <div className="flex space-x-6">
         {facts.map((fact) => (
-          <div className="flex-col w-1/3 space-y-3 ">
+          <div className="flex-col w-1/3 space-y-3 " key={fact.title}>
             <div key={fact.title} className="flex justify-center ">
               <div className=" bg-indigo-600 rounded-full p-2">{fact.icon}</div>
             </div>

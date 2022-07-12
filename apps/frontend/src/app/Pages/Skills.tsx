@@ -43,7 +43,10 @@ const Skills = () => {
       <div>
         <div className="flex flex-wrap ">
           {skills.map((skill) => (
-            <div className="flex-col w-2/4 space-y-3 px-4 py-2">
+            <div
+              className="flex-col w-2/4 space-y-3 px-4 py-2"
+              key={skill.title}
+            >
               <div className="flex w-full">
                 <p className="text-xs font-bold text-[#45505b]">
                   {skill.title}

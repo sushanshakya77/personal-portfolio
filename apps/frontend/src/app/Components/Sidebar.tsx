@@ -33,10 +33,10 @@ const buttonContent = [
         width="22"
         height="22"
         viewBox="0 0 24 24"
-        stroke-width="1.8"
+        strokeWidth="1.8"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <circle cx="12" cy="7" r="4" />
@@ -53,10 +53,10 @@ const buttonContent = [
         width="22"
         height="22"
         viewBox="0 0 24 24"
-        stroke-width="1.8"
+        strokeWidth="1.8"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M14 3v4a1 1 0 0 0 1 1h4" />
@@ -73,10 +73,10 @@ const buttonContent = [
         width="22"
         height="22"
         viewBox="0 0 24 24"
-        stroke-width="1.8"
+        strokeWidth="1.8"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
@@ -94,10 +94,10 @@ const buttonContent = [
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        stroke-width="1.8"
+        strokeWidth="1.8"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <rect x="3" y="4" width="18" height="8" rx="3" />
@@ -116,10 +116,10 @@ const buttonContent = [
         width="22"
         height="22"
         viewBox="0 0 24 24"
-        stroke-width="1.8"
+        strokeWidth="1.8"
         fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <rect x="3" y="5" width="18" height="14" rx="2" />
