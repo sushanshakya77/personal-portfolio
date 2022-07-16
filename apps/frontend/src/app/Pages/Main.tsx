@@ -2,6 +2,7 @@ import React from 'react';
 import About from './About';
 import Facts from './Facts';
 import Home from './Home';
+import Portfolio from './Portfolio';
 import Resume from './Resume';
 import Skills from './Skills';
 
@@ -13,6 +14,7 @@ const Main = () => {
       <Facts />
       <Skills />
       <Resume />
+      <Portfolio />
     </main>
   );
 };
