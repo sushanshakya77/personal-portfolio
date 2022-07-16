@@ -3,6 +3,7 @@ import potrait2 from '../Images/potrait.png';
 
 const socialMedia = [
   {
+    title: 'Github',
     link: 'https://github.com/sushanshakya77',
     icon: (
       <svg
@@ -22,6 +23,7 @@ const socialMedia = [
     ),
   },
   {
+    title: 'Linkedin',
     link: 'https://www.linkedin.com/in/sushan-shakya-8a575a197/',
     icon: (
       <svg
@@ -45,6 +47,7 @@ const socialMedia = [
     ),
   },
   {
+    title: 'Instagram',
     link: 'https://www.instagram.com/whossushan/',
     icon: (
       <svg
@@ -66,6 +69,7 @@ const socialMedia = [
     ),
   },
   {
+    title: 'Facebook',
     link: 'https://www.facebook.com/profile.php?id=100022736683759',
     icon: (
       <svg
@@ -84,6 +88,29 @@ const socialMedia = [
       </svg>
     ),
   },
+  {
+    title: 'Download CV',
+    link: 'potrait2',
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="icon icon-tabler icon-tabler-download"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+        <polyline points="7 11 12 16 17 11" />
+        <line x1="12" y1="4" x2="12" y2="16" />
+      </svg>
+    ),
+    download: true,
+  },
 ];
 
 const Home = () => {
@@ -98,41 +125,22 @@ const Home = () => {
         </h3>
         <div className="flex space-x-4">
           {socialMedia.map((item) => (
-            <a
-              href={item.link}
-              key={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="stroke-[#5e5c5c] hover:stroke-indigo-600 hover:scale-110 transition ease-in-out duration-200 "
-            >
-              {item.icon}
-            </a>
+            <div className="relative group ">
+              <a
+                href={item.link}
+                key={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="stroke-[#5e5c5c] hover:stroke-indigo-600 hover:scale-110 transition ease-in-out duration-200 "
+                {...(item.download && { download: true })}
+              >
+                {item.icon}
+                <div className="bg-indigo-600 text-white px-2 py-1  absolute invisible group-hover:visible  -left-5 rounded-full text-center ">
+                  <p>{item.title}</p>
+                </div>
+              </a>
+            </div>
           ))}
-          <a
-            href={potrait2}
-            className=" flex items-center group transition-all ease-in-out duration-200 rounded-full hover:bg-slate-200 stroke-[#5e5c5c] hover:stroke-indigo-600  "
-            download
-          >
-            <h4 className="hidden group-hover:block transition-all ease-in-out duration-200">
-              Download CV
-            </h4>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-download"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-              <polyline points="7 11 12 16 17 11" />
-              <line x1="12" y1="4" x2="12" y2="16" />
-            </svg>
-          </a>
         </div>
       </div>
       <div className="grow" />
