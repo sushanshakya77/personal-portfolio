@@ -32,7 +32,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <Section>
+    <Section _id="skills">
       <Title
         title="Skills"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,

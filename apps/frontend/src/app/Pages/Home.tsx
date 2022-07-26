@@ -1,7 +1,7 @@
 import React from 'react';
 import potrait2 from '../Images/potrait.png';
 
-const socialMedia = [
+export const socialMedia = [
   {
     title: 'Github',
     link: 'https://github.com/sushanshakya77',
@@ -115,7 +115,10 @@ const socialMedia = [
 
 const Home = () => {
   return (
-    <section className="h-screen bg-slate-100  flex justify-center items-center pl-28 relative">
+    <section
+      className="h-screen bg-slate-100  flex justify-center items-center pl-28 relative"
+      id="home"
+    >
       <div className="flex flex-col justify-center space-y-4 w-2/4 ">
         <h1 className=" text-slate-600 text-6xl font-bold font-sans-serif">
           Sushan Shakya
@@ -123,23 +126,21 @@ const Home = () => {
         <h3 className=" text-slate-600 text-2xl">
           I'm <span className="text-indigo-600 ">Web Developer.</span>
         </h3>
-        <div className="flex space-x-4">
+        <div className="flex space-x-4  ">
           {socialMedia.map((item) => (
-            <div className="relative group ">
-              <a
-                href={item.link}
-                key={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="stroke-[#5e5c5c] hover:stroke-indigo-600 hover:scale-110 transition ease-in-out duration-200 "
-                {...(item.download && { download: true })}
-              >
-                {item.icon}
-                <div className="bg-indigo-600 text-white px-2 py-1  absolute invisible group-hover:visible  -left-5 rounded-full text-center ">
-                  <p>{item.title}</p>
-                </div>
-              </a>
-            </div>
+            <a
+              href={item.link}
+              key={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="stroke-[#5e5c5c] hover:stroke-indigo-600 group hover:scale-110 transition ease-in-out duration-200 "
+              {...(item.download && { download: true })}
+            >
+              {item.icon}
+              <div className="bg-indigo-600 text-white px-2 py-1  absolute invisible group-hover:visible  -left-5 rounded-full text-center ">
+                <p>{item.title}</p>
+              </div>
+            </a>
           ))}
         </div>
       </div>

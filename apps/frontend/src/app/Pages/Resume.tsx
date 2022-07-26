@@ -21,7 +21,7 @@ const education = [
 
 const Resume = () => {
   return (
-    <Section>
+    <Section _id="resume">
       <Title
         title="Resume"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,

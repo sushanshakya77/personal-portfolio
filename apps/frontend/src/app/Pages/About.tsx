@@ -40,7 +40,7 @@ const firstInfo = [
 
 const About = () => {
   return (
-    <Section>
+    <Section _id="about">
       <Title
         title="About"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
