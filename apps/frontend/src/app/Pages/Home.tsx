@@ -137,9 +137,9 @@ const Home = () => {
               {...(item.download && { download: true })}
             >
               {item.icon}
-              <div className="bg-indigo-600 text-white px-2 py-1  absolute invisible group-hover:visible  -left-5 rounded-full text-center ">
+              {/* <div className="bg-indigo-600 text-white px-2 py-1  absolute invisible group-hover:visible  -left-5 rounded-full text-center ">
                 <p>{item.title}</p>
-              </div>
+              </div> */}
             </a>
           ))}
         </div>

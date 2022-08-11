@@ -166,6 +166,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-function checkActive(href: string) {
-  throw new Error('Function not implemented.');
-}
