@@ -6,6 +6,9 @@
   .clip-path {
     clip-path: polygon(100% 0%, 100% 0, 100% 100%, 0% 100%);
   }
+  .fancy-border-radius {
+    border-radius: 35% 72% 51% 50% / 52% 42% 60% 52%;
+  }
 }
 
 html {
