@@ -28,6 +28,15 @@ const Footer = () => {
           </a>
         ))}
       </div>
+      <div className=" space-y-2  text-slate-600">
+        <div className="flex justify-center content-center text-sm">
+          &copy; Copyright <span className="font-bold "> Sushan Shakya</span>.
+          All Rights Reserved
+        </div>
+        <div className="flex justify-center content-center text-sm">
+          Designed by Sushan Shakya
+        </div>
+      </div>
     </Section>
   );
 };
