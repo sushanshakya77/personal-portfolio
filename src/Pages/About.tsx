@@ -1,7 +1,10 @@
-import React from "react";
+import * as dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+import potrait1 from "../assets/images/resume3.jpg";
 import Section from "../Components/Section";
 import Title from "../Components/Title";
-import potrait1 from "../assets/images/resume3.jpg";
+
+dayjs.extend(relativeTime);
 
 const firstInfo = [
   {
@@ -22,7 +25,7 @@ const firstInfo = [
   },
   {
     title: "Age",
-    info: "21 years old",
+    info: `${dayjs("2001-01-04").toNow(true)} old`,
   },
   {
     title: "Degree",
