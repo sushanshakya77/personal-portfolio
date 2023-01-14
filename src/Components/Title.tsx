@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 interface ITitleProps {
   title: string;
-  description: string;
+  description?: string;
 }
 
 const Title = ({ title, description }: ITitleProps) => {
