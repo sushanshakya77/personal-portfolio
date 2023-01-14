@@ -117,11 +117,11 @@ export const socialMedia = [
 const Home = () => {
   return (
     <section
-      className="h-screen bg-slate-100  flex justify-center items-center pl-28 relative"
+      className="h-screen bg-slate-100 flex items-center pl-36 relative text-center justify-center content-center z-96 -ml-20"
       id="home"
     >
-      <div className="flex flex-col justify-center space-y-4 w-2/4 ">
-        <h1 className=" text-slate-600 text-6xl font-bold font-sans-serif">
+      <div className="flex flex-col justify-center text-start  space-y-4 w-2/4  ">
+        <h1 className=" text-slate-600  text-6xl font-bold font-sans-serif">
           Sushan Shakya
         </h1>
         <h3 className=" text-slate-600 text-2xl">

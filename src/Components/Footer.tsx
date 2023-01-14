@@ -4,13 +4,11 @@ import Section from "./Section";
 const Footer = () => {
   return (
     <Section
-      customStyle="text-center justify-center content-center"
+      customStyle="text-center justify-center content-center bg-slate-100 z-96 -ml-24 py-16"
       _id="footer"
     >
       <div className=" space-y-4 text-center">
-        <h1 className="text-4xl font-bold text-[#45505b] uppercase">
-          Sushan Shakya
-        </h1>
+        <h1 className="text-4xl font-bold text-[#45505b] ">Sushan Shakya</h1>
         <p className="italic">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos rem,
           saepe quis iste.

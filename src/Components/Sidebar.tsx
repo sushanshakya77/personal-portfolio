@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 const buttonContent = [
   {
-    title: 'Home',
+    title: "Home",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -20,11 +20,11 @@ const buttonContent = [
         <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
       </svg>
     ),
-    active: 'bg-indigo-700',
-    href: '#home',
+    active: "bg-indigo-700",
+    href: "#home",
   },
   {
-    title: 'About',
+    title: "About",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -42,10 +42,10 @@ const buttonContent = [
         <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
       </svg>
     ),
-    href: '#about',
+    href: "#about",
   },
   {
-    title: 'Resume',
+    title: "Resume",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -63,10 +63,10 @@ const buttonContent = [
         <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
       </svg>
     ),
-    href: '#resume',
+    href: "#resume",
   },
   {
-    title: 'Portfolio',
+    title: "Portfolio",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -85,10 +85,10 @@ const buttonContent = [
         <line x1="13" y1="12" x2="15" y2="12" />
       </svg>
     ),
-    href: '#portfolio',
+    href: "#portfolio",
   },
   {
-    title: 'Services',
+    title: "Services",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -108,10 +108,10 @@ const buttonContent = [
         <line x1="7" y1="16" x2="7" y2="16.01" />
       </svg>
     ),
-    href: '#services',
+    href: "#services",
   },
   {
-    title: 'Contact',
+    title: "Contact",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ const buttonContent = [
         <polyline points="3 7 12 13 21 7" />
       </svg>
     ),
-    href: '#contact',
+    href: "#contact",
   },
 ];
 const Sidebar = () => {
@@ -138,28 +138,30 @@ const Sidebar = () => {
 
   const checkActive = (item: string) => {
     if (location === item) {
-      return 'bg-indigo-700';
+      return "bg-indigo-700";
     }
-    return '';
+    return "";
   };
 
   return (
-    <header className="flex-none bg-slate-100 w-[86px] z-10">
-      <div className="p-5 flex-col space-y-2 fixed py-44">
-        {buttonContent.map((content) => (
-          <a
-            key={content.title}
-            className={`flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-200 rounded-full p-4 stroke-gray-700 hover:bg-indigo-600 hover:stroke-white hover:max-w-[156px] justify-center items-center ${checkActive(
-              content.href
-            )} `}
-            href={content.href}
-          >
-            {content.icon}
-            <h5 className="hidden group-hover:block text-white transition-all ease-in-out delay-150 ">
-              {content.title}
-            </h5>
-          </a>
-        ))}
+    <header className="flex-none bg-transparent  w-[86px] z-10 ">
+      <div className=" h-screen p-5 fixed flex items-center  ">
+        <div className="space-y-2">
+          {buttonContent.map((content) => (
+            <a
+              key={content.title}
+              className={`flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-200 rounded-full p-4 stroke-gray-700 hover:bg-indigo-600  hover:stroke-white hover:max-w-[156px] justify-center items-center ${checkActive(
+                content.href
+              )} `}
+              href={content.href}
+            >
+              {content.icon}
+              <h5 className="hidden group-hover:block text-white transition-all ease-in-out delay-150 ">
+                {content.title}
+              </h5>
+            </a>
+          ))}
+        </div>
       </div>
     </header>
   );
