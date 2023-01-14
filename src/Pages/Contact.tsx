@@ -97,7 +97,39 @@ const Contact = () => {
             ))}
           </div>
         </div>
-        <div className="w-2/3"></div>
+        <div className="w-2/3 space-y-4 ">
+          <div className="flex space-x-5">
+            <input
+              className=" border-[1px] rounded-md w-1/2 h-5 py-5 px-3 text-grey-darker focus:border-[#4f46e5]  focus:outline-none  "
+              type="text"
+              placeholder="Your Name"
+            />
+            <input
+              className=" border-[1px] rounded-md w-1/2 h-5 py-5 px-3 text-grey-darker focus:border-[#4f46e5] focus:outline-none "
+              type="text"
+              placeholder="Your Email"
+            />
+          </div>
+          <div>
+            <input
+              className=" border-[1px] rounded-md w-full h-5 py-5 px-3 text-grey-darker focus:border-[#4f46e5]  focus:outline-none "
+              type="text"
+              placeholder="Subject"
+            />
+          </div>
+          <div>
+            <textarea
+              className=" border-[1px] rounded-md w-full p-3 text-grey-darker  focus:border-[#4f46e5]  focus:outline-none "
+              rows={5}
+              placeholder="Message"
+            />
+          </div>
+          <div className="flex justify-center  w-full">
+            <button className="bg-[#4f46e5] text-slate-100 text-lg p-3 rounded-full w-1/3 hover:scale-105 ease-in-out transition-all duration-300  ">
+              Send Message
+            </button>
+          </div>
+        </div>
       </div>
     </Section>
   );
