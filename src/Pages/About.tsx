@@ -1,6 +1,6 @@
 import * as dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import potrait1 from "../assets/images/resume3.jpg";
+import potrait1 from "../assets/images/easy.gif";
 import Section from "../Components/Section";
 import Title from "../Components/Title";
 
@@ -52,9 +52,9 @@ const About = () => {
           tenetur quae."
       />
       <div className="flex space-x-6">
-        <div className="flex-none w-[416px] overflow-hidden ">
+        <div className="flex-none h-full w-[416px] overflow-hidden ">
           <img
-            className="h-[440px] w-[416px] object-cover hover:scale-125 transition-all duration-500 ease-in-out"
+            className="h-[440px] w-[416px] object-cover hover:scale-110 transition-all duration-500 ease-in-out"
             src={potrait1}
             alt="about"
           />
