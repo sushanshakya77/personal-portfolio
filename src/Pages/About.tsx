@@ -1,4 +1,5 @@
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
+import React from "react";
 import relativeTime from "dayjs/plugin/relativeTime";
 import potrait1 from "../assets/images/easy.gif";
 import Section from "../Components/Section";
@@ -42,6 +43,7 @@ const firstInfo = [
 ];
 
 const About = () => {
+  const [animation, setAnimation] = React.useState(false);
   return (
     <Section _id="about">
       <Title
@@ -85,7 +87,7 @@ const About = () => {
                       stroke="#5f37ef"
                       fill="none"
                       strokeLinecap="round"
-                      stroke-linejoin="round"
+                      strokeLinejoin="round"
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <polyline points="9 6 15 12 9 18" />
