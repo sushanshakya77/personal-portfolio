@@ -148,12 +148,12 @@ const Sidebar = () => {
 
   return (
     <header
-      className={`flex flex-col h-screen justify-center fixed top-0 bottom-0 left-0 max-lg:border-[1px] max-lg:w-[300px] max-lg:p-0 max-lg:bg-white z-50 overflow-y-auto transition-all ease-in-out duration-500 ${
+      className={`flex flex-col h-screen transition-all ease-in-out duration-500 justify-center fixed top-0 bottom-0 left-0 max-lg:border-[1px] max-lg:w-[300px] max-lg:bg-white z-50 overflow-y-auto   ${
         open ? "-left-80" : ""
       } `}
     >
       <button
-        className={` h-10 w-10 rounded-full fixed top-3 right-3 stroke-white flex justify-center items-center transition-all duration-300 ease-in-out ${
+        className={`lg:hidden h-10 w-10 rounded-full fixed top-3 right-3 stroke-white flex justify-center items-center transition-all duration-300 ease-in-out ${
           open ? "bg-transparent" : "bg-indigo-600"
         }`}
         onClick={() => setOpen(!open)}
@@ -193,7 +193,7 @@ const Sidebar = () => {
           </svg>
         )}
       </button>
-      <div className="bg-indigo-700 h-9 w-9 rounded-full fixed bottom-3 right-3 stroke-white justify-center items-center flex">
+      <button className="lg:hidden bg-indigo-700 h-9 w-9 rounded-full fixed bottom-3 right-3 stroke-white justify-center items-center flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="icon icon-tabler icon-tabler-arrow-up "
@@ -210,7 +210,7 @@ const Sidebar = () => {
           <line x1="18" y1="11" x2="12" y2="5" />
           <line x1="6" y1="11" x2="12" y2="5" />
         </svg>
-      </div>
+      </button>
       <nav className="p-5">
         <div className="space-y-2 max-lg:space-y-4">
           {buttonContent.map((content) => (
