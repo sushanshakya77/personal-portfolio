@@ -1,11 +1,11 @@
-import React from 'react';
-import Section from '../Components/Section';
-import Title from '../Components/Title';
+import React from "react";
+import Section from "../Components/Section";
+import Title from "../Components/Title";
 
 const facts = [
   {
     number: 1,
-    title: 'Happy Clients',
+    title: "Happy Clients",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const facts = [
   },
   {
     number: 60,
-    title: 'Projects',
+    title: "Projects",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const facts = [
   },
   {
     number: 12,
-    title: 'Certificates',
+    title: "Certificates",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ const Facts = () => {
       />
       <div className="flex space-x-6">
         {facts.map((fact) => (
-          <div className="flex-col w-1/3 space-y-3 " key={fact.title}>
+          <div className="flex-col  w-1/3 space-y-3 " key={fact.title}>
             <div key={fact.title} className="flex justify-center ">
               <div className=" bg-indigo-600 rounded-full p-2">{fact.icon}</div>
             </div>
