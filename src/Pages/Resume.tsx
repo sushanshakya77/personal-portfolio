@@ -63,8 +63,8 @@ const Resume = () => {
           </div>
           <h2 className="text-2xl text-[#45505b] font-bold ">Education</h2>
           <div className="space-y-2 border-l-2 px-6 border-indigo-600 relative">
-            {education.map((edu, index) => (
-              <>
+            {education.map((edu) => (
+              <div key={edu.college}>
                 <div className="h-4 w-4 bg-white border-2 border-indigo-600 rounded-full absolute -left-[9px]  "></div>
                 <h3 className="text-xl uppercase text-indigo-600 font-semibold mt-0">
                   {edu.courseTitle}
@@ -74,7 +74,7 @@ const Resume = () => {
                 </h3>
                 <p className="italic">{edu.college}</p>
                 <p>{edu.description}</p>
-              </>
+              </div>
             ))}
           </div>
         </div>
