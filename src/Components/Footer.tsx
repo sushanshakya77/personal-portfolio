@@ -4,7 +4,7 @@ import Section from "./Section";
 const Footer = () => {
   return (
     <Section
-      customStyle="text-center justify-center content-center bg-slate-100 z-96 -ml-24 py-16"
+      customStyle="text-center justify-center content-center bg-[#fafafa] z-96 -ml-24 py-12"
       _id="footer"
     >
       <div className=" space-y-4 text-center">
@@ -21,7 +21,7 @@ const Footer = () => {
             key={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="stroke- stroke-[#ddd] bg-indigo-600 p-2 rounded-full hover:bg-indigo-500 hover:scale-110 transition ease-in-out duration-200 "
+            className="stroke- stroke-[#fff] bg-indigo-600 p-2 rounded-full hover:bg-indigo-500 hover:scale-110 transition ease-in-out duration-200 "
             {...(item.download && { download: true })}
           >
             {item.icon}

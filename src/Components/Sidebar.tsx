@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 const buttonContent = [
   {
     title: "Home",
@@ -133,15 +133,15 @@ const buttonContent = [
   },
 ];
 const Sidebar = () => {
-  const location = window.location.hash;
-  console.log(location);
+  // const location = window.location.hash;
 
-  const checkActive = (item: string) => {
-    if (location === item) {
-      return "bg-indigo-700";
-    }
-    return "";
-  };
+  // const checkActive = (item: string) => {
+  //   console.log(location, item);
+
+  //   if (location === item) {
+  //     return "bg-indigo-700";
+  //   }
+  // };
 
   return (
     <header className="flex-none bg-transparent  w-[86px] z-10 ">
@@ -150,9 +150,7 @@ const Sidebar = () => {
           {buttonContent.map((content) => (
             <a
               key={content.title}
-              className={`flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-200 rounded-full p-4 stroke-gray-700 hover:bg-indigo-600  hover:stroke-white hover:max-w-[156px] justify-center items-center ${checkActive(
-                content.href
-              )} `}
+              className={`flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-100 rounded-full p-4 stroke-gray-700 hover:bg-indigo-600  hover:stroke-white hover:max-w-[156px] justify-center items-center `}
               href={content.href}
             >
               {content.icon}

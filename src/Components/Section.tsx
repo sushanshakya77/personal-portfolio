@@ -8,7 +8,7 @@ interface ISectionProps {
 
 const Section = ({ children, customStyle, _id }: ISectionProps) => {
   return (
-    <section className={`space-y-8 px-24 my-16 ${customStyle}`} id={_id}>
+    <section className={`space-y-8 px-24 my-16  ${customStyle}`} id={_id}>
       {children}
     </section>
   );

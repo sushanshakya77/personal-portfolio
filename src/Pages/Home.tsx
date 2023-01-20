@@ -1,5 +1,6 @@
 import React from "react";
 import potrait2 from "../assets/images/potrait.png";
+import bg from "../assets/images/bg.png";
 import logo from "../assets/svg/undraw_developer_activity_re_39tg.svg";
 
 export const socialMedia = [
@@ -117,11 +118,11 @@ export const socialMedia = [
 const Home = () => {
   return (
     <section
-      className="h-screen bg-slate-100 flex items-center pl-36 relative text-center justify-center content-center z-96 -ml-20"
+      className="h-screen bg-[#fff] flex items-center pl-36 relative text-center justify-center content-center z-96 -ml-20 "
       id="home"
     >
       <div className="flex flex-col justify-center text-start  space-y-4 w-2/4  ">
-        <h1 className=" text-slate-600  text-6xl font-bold font-sans-serif">
+        <h1 className=" text-slate-600  text-7xl font-extrabold font-sans-serif">
           Sushan Shakya
         </h1>
         <h3 className=" text-slate-600 text-2xl">
@@ -147,7 +148,7 @@ const Home = () => {
       </div>
       <div className="grow" />
       <div className="flex flex-col h-full w-2/4 absolute top-0 right-0 transition-all duration-200 ease-in-out ">
-        <div className="bg-indigo-600 h-full clip-path "></div>
+        <div className="bg-indigo-600 h-full clip-path " />
         <div className="absolute top-0 right-10">
           <img className="h-screen object-cover " src={potrait2} alt="bg" />
         </div>
