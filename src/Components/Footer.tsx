@@ -3,10 +3,7 @@ import Section from "./Section";
 
 const Footer = () => {
   return (
-    <Section
-      customStyle="text-center justify-center content-center bg-[#fafafa] z-96 -ml-24 py-12"
-      _id="footer"
-    >
+    <footer className=" space-y-8 px-24 my-16 text-center justify-center content-center bg-[#fafafa] z-96 -ml-24 py-12">
       <div className=" space-y-4 text-center">
         <h1 className="text-4xl font-bold text-[#45505b] ">Sushan Shakya</h1>
         <p className="italic">
@@ -37,7 +34,7 @@ const Footer = () => {
           Designed by Sushan Shakya
         </div>
       </div>
-    </Section>
+    </footer>
   );
 };
 

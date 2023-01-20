@@ -118,17 +118,17 @@ export const socialMedia = [
 const Home = () => {
   return (
     <section
-      className="h-screen bg-[#fff] flex items-center pl-36 relative text-center justify-center content-center z-96 -ml-20 "
+      className="h-screen bg-[#fff] flex items-center lg:pl-16 text-center z-96  "
       id="home"
     >
-      <div className="flex flex-col justify-center text-start  space-y-4 w-2/4  ">
-        <h1 className=" text-slate-600  text-7xl font-extrabold font-sans-serif">
+      <div className="flex flex-col justify-center lg:text-start text-center space-y-4 w-screen lg:w-2/4  ">
+        <h1 className=" text-slate-600  lg:text-7xl text-4xl font-extrabold font-sans-serif">
           Sushan Shakya
         </h1>
-        <h3 className=" text-slate-600 text-2xl">
+        <h3 className=" text-slate-600 lg:text-2xl text-lg ">
           I'm <span className="text-indigo-600 ">Web Developer.</span>
         </h3>
-        <div className="flex space-x-4  ">
+        <div className="flex space-x-4 max-lg:justify-center ">
           {socialMedia.map((item) => (
             <a
               href={item.link}
@@ -148,9 +148,13 @@ const Home = () => {
       </div>
       <div className="grow" />
       <div className="flex flex-col h-full w-2/4 absolute top-0 right-0 transition-all duration-200 ease-in-out ">
-        <div className="bg-indigo-600 h-full clip-path " />
+        <div className="bg-indigo-600 h-full clip-path max-lg:invisible" />
         <div className="absolute top-0 right-10">
-          <img className="h-screen object-cover " src={potrait2} alt="bg" />
+          <img
+            className="h-screen object-cover max-lg:hidden "
+            src={potrait2}
+            alt="bg"
+          />
         </div>
       </div>
     </section>

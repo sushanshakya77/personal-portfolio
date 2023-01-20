@@ -273,7 +273,7 @@ const Services = () => {
       <div className="flex flex-wrap  ">
         {services.map((item) => (
           <div
-            className={`shadow-[0px_5px_90px_0px_rgba(110,123,131,0.05)] bg-white  rounded-md py-14 px-4 space-y-1 hover:drop-shadow-xl transition-all duration-500 mr-4 mt-4 ease-in-out 2xl:w-[32%] lg:w-[47%] sm:w-full `}
+            className={`shadow-[0px_5px_90px_0px_rgba(110,123,131,0.05)] bg-white  rounded-md py-14 px-4 space-y-1 hover:drop-shadow-xl transition-all duration-500 mr-4 mt-4 ease-in-out w-[32%] lg:w-[47%] sm:w-full `}
             key={item.title}
           >
             <a

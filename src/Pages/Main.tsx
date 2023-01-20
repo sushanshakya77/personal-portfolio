@@ -11,7 +11,7 @@ import Skills from "./Skills";
 
 const Main = () => {
   return (
-    <main className="flex-initial w-full">
+    <main className="lg:ml-28  ">
       <Home />
       <About />
       <Facts />

@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import cross from "../assets/svg/cross.svg";
+import React from "react";
 const buttonContent = [
   {
     title: "Home",
@@ -143,24 +144,89 @@ const Sidebar = () => {
   //   }
   // };
 
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <header className="flex-none bg-transparent  w-[86px] z-10 ">
-      <div className=" h-screen p-5 fixed flex items-center  ">
-        <div className="space-y-2">
+    <header
+      className={`flex flex-col h-screen justify-center fixed top-0 bottom-0 left-0 max-lg:border-[1px] max-lg:w-[300px] max-lg:p-0 max-lg:bg-white z-50 overflow-y-auto transition-all ease-in-out duration-500 ${
+        open ? "-left-80" : ""
+      } `}
+    >
+      <button
+        className={` h-10 w-10 rounded-full fixed top-3 right-3 stroke-white flex justify-center items-center transition-all duration-300 ease-in-out ${
+          open ? "bg-transparent" : "bg-indigo-600"
+        }`}
+        onClick={() => setOpen(!open)}
+      >
+        {open ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-menu-2 stroke-indigo-700"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-x"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        )}
+      </button>
+      <div className="bg-indigo-700 h-9 w-9 rounded-full fixed bottom-3 right-3 stroke-white justify-center items-center flex">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon-tabler icon-tabler-arrow-up "
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="12" y1="5" x2="12" y2="19" />
+          <line x1="18" y1="11" x2="12" y2="5" />
+          <line x1="6" y1="11" x2="12" y2="5" />
+        </svg>
+      </div>
+      <nav className="p-5">
+        <div className="space-y-2 max-lg:space-y-4">
           {buttonContent.map((content) => (
             <a
               key={content.title}
-              className={`flex group max-w-[55px] max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-100 rounded-full p-4 stroke-gray-700 hover:bg-indigo-600  hover:stroke-white hover:max-w-[156px] justify-center items-center `}
+              className={`flex group max-w-full hover:max-w-full lg:max-w-[55px] lg:max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-100 rounded-full p-4 stroke-gray-700  hover:bg-indigo-600  hover:stroke-white   justify-center items-center `}
               href={content.href}
             >
               {content.icon}
-              <h5 className="hidden group-hover:block text-white transition-all ease-in-out delay-150 ">
+              <h5 className="lg:hidden group-hover:block max-lg:text-lg max-lg:group-hover:text-white  max-lg:text-gray-700 text-white transition-all ease-in-out delay-150 ">
                 {content.title}
               </h5>
             </a>
           ))}
         </div>
-      </div>
+      </nav>
     </header>
   );
 };
