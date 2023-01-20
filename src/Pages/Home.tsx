@@ -118,9 +118,14 @@ export const socialMedia = [
 const Home = () => {
   return (
     <section
-      className="h-screen bg-[#fff] flex items-center lg:pl-16 text-center z-96  "
+      className="h-screen bg-[#fff] flex max-lg:relative items-center lg:pl-16  text-center z-96  "
       id="home"
     >
+      <img
+        src="https://source.unsplash.com/collection/335434/coding"
+        alt="bg"
+        className="lg:hidden h-screen w-screen object-cover opacity-10 absolute top-0"
+      />
       <div className="flex flex-col justify-center lg:text-start text-center space-y-4 w-screen lg:w-2/4  ">
         <h1 className=" text-slate-600  lg:text-7xl text-4xl font-extrabold font-sans-serif">
           Sushan Shakya
