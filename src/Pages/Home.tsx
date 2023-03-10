@@ -92,7 +92,7 @@ export const socialMedia = [
   },
   {
     title: "Download CV",
-    link: "potrait2",
+    link: "../assets/images/potrait.png",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +133,7 @@ const Home = () => {
         <h3 className=" text-slate-600 lg:text-2xl text-lg ">
           I'm <span className="text-indigo-600 ">Web Developer.</span>
         </h3>
-        <div className="flex space-x-4 max-lg:justify-center ">
+        <div className="flex space-x-4 max-lg:justify-center z-50 ">
           {socialMedia.map((item) => (
             <a
               href={item.link}

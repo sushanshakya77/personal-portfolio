@@ -72,38 +72,38 @@ const About = () => {
               culpa ex nostrum, sed assumenda tenetur quaerat ad ab omnis,
               aspernatur, corrupti earum!
             </p>
-            <div className="flex">
-              <div className="flex flex-wrap ">
-                {firstInfo.map((item) => (
-                  <div className="py-3 w-2/4" key={item.title}>
-                    <h3
-                      key={item.title}
-                      className="text-lg font-semibold text-slate-800 flex items-center"
+            {/* <div className="flex"> */}
+            <div className="flex flex-wrap ">
+              {firstInfo.map((item) => (
+                <div className="py-3 w-2/4" key={item.title}>
+                  <h3
+                    key={item.title}
+                    className="text-lg font-semibold text-slate-800 flex items-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="icon icon-tabler icon-tabler-chevron-right"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="#5f37ef"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="icon icon-tabler icon-tabler-chevron-right"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="#5f37ef"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <polyline points="9 6 15 12 9 18" />
-                      </svg>{" "}
-                      {item.title}:{"   "}
-                      <span className="text-base font-normal ml-2">
-                        {item.info}
-                      </span>
-                    </h3>
-                  </div>
-                ))}
-              </div>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <polyline points="9 6 15 12 9 18" />
+                    </svg>{" "}
+                    {item.title}:{"   "}
+                    <span className="text-base font-normal ml-2">
+                      {item.info}
+                    </span>
+                  </h3>
+                </div>
+              ))}
             </div>
+            {/* </div> */}
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
               esse omnis accusamus minus sint, ullam voluptatem nemo eos velit

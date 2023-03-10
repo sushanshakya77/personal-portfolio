@@ -1,5 +1,6 @@
 import cross from "../assets/svg/cross.svg";
 import React from "react";
+import { useLocation } from "react-router";
 const buttonContent = [
   {
     title: "Home",
@@ -134,17 +135,13 @@ const buttonContent = [
   },
 ];
 const Sidebar = () => {
-  // const location = window.location.hash;
-
-  // const checkActive = (item: string) => {
-  //   console.log(location, item);
-
-  //   if (location === item) {
-  //     return "bg-indigo-700";
-  //   }
-  // };
-
+  const location = useLocation();
   const [open, setOpen] = React.useState(false);
+
+  console.log(
+    location.hash,
+    buttonContent.map((h) => h.href)
+  );
 
   return (
     <header
@@ -216,7 +213,11 @@ const Sidebar = () => {
           {buttonContent.map((content) => (
             <a
               key={content.title}
-              className={`flex group max-w-full hover:max-w-full lg:max-w-[55px] lg:max-h-[54px] transition-all ease-in-out duration-500 space-x-2 bg-slate-100 rounded-full p-4 stroke-gray-700  hover:bg-indigo-600  hover:stroke-white   justify-center items-center `}
+              className={`flex group max-w-full hover:max-w-full lg:max-w-[55px] lg:max-h-[54px] transition-all ease-in-out duration-500 space-x-2  rounded-full p-4   hover:bg-indigo-600  hover:stroke-white   justify-center items-center ${
+                location.hash === content.href
+                  ? "bg-indigo-600 stroke-white"
+                  : "bg-slate-100 stroke-gray-700"
+              } `}
               href={content.href}
             >
               {content.icon}

@@ -1,32 +1,32 @@
-import React from 'react';
-import Section from '../Components/Section';
-import Title from '../Components/Title';
+import React from "react";
+import Section from "../Components/Section";
+import Title from "../Components/Title";
 
 const skills = [
   {
-    title: 'HTML',
-    level: '80%',
+    title: "HTML",
+    level: "80%",
   },
   {
-    title: 'CSS',
-    level: '70%',
+    title: "CSS",
+    level: "70%",
   },
   {
-    title: 'JavaScript',
-    level: '60%',
+    title: "JavaScript",
+    level: "60%",
   },
   {
-    title: 'React',
-    level: '80%',
+    title: "React",
+    level: "80%",
   },
   {
-    title: 'TypeScript',
-    level: '70%',
+    title: "TypeScript",
+    level: "70%",
   },
 
   {
-    title: 'Express',
-    level: '75%',
+    title: "Express",
+    level: "75%",
   },
 ];
 
@@ -44,7 +44,7 @@ const Skills = () => {
         <div className="flex flex-wrap ">
           {skills.map((skill) => (
             <div
-              className="flex-col w-2/4 space-y-3 px-4 py-2"
+              className="flex-col w-1/2 space-y-3 px-4 py-2"
               key={skill.title}
             >
               <div className="flex w-full">
