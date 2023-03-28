@@ -17,11 +17,12 @@ module.exports = {
             opacity: 1
           }
         },
+      },
+      transitionTimingFunction: {
+        'wiggle': 'cubic-bezier(.32,2,.55,.27)'
       }
     },
-    fontFamily: {
-      'sans-serif': ['Raleway', 'sans-serif'],
-    },
+
   },
   plugins: [],
 }
