@@ -1,7 +1,4 @@
-import React from "react";
-import potrait2 from "../assets/images/potrait.png";
-import bg from "../assets/images/bg.png";
-import logo from "../assets/svg/undraw_developer_activity_re_39tg.svg";
+import potrait2 from "../assets/images/potrait4.jpg";
 
 export const socialMedia = [
   {
@@ -154,9 +151,9 @@ const Home = () => {
       <div className="grow" />
       <div className="flex flex-col h-full w-2/4 absolute top-0 right-0 transition-all duration-200 ease-in-out ">
         {/* <div className="bg-indigo-600 h-full fancy-border-radius max-lg:invisible" /> */}
-        <div className="absolute top-0 right-10">
+        <div className="absolute top-[28%] right-48 border-[10px] rounded-full fancy-border-radius border-purple-500 h-[340px] w-[340px] overflow-hidden">
           <img
-            className="h-screen object-cover max-lg:hidden "
+            className="object-cover max-lg:hidden "
             src={potrait2}
             alt="bg"
           />
