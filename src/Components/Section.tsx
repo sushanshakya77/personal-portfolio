@@ -9,7 +9,7 @@ interface ISectionProps {
 const Section = ({ children, customStyle, _id }: ISectionProps) => {
   return (
     <section
-      className={`space-y-8 px-20 py-16 overflow-hidden  ${customStyle ?? ""}`}
+      className={`space-y-8 px-20 py-12 overflow-hidden  ${customStyle ?? ""}`}
       id={_id}
     >
       {children}

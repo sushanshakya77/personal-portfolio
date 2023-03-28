@@ -3,7 +3,7 @@ import Section from "./Section";
 
 const Footer = () => {
   return (
-    <footer className=" space-y-8 px-24 my-16 text-center justify-center content-center bg-[#fafafa] z-96 -ml-24 py-12">
+    <footer className=" space-y-8 px-24 my-16 text-center justify-center content-center  z-96  py-12">
       <div className=" space-y-4 text-center">
         <h1 className="text-4xl font-bold text-[#45505b] ">Sushan Shakya</h1>
         <p className="italic">
@@ -18,7 +18,7 @@ const Footer = () => {
             key={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="stroke- stroke-[#fff] bg-indigo-600 p-2 rounded-full hover:bg-indigo-500 hover:scale-110 transition ease-in-out duration-200 "
+            className="stroke- stroke-[#fff] bg-indigo-600 p-2 rounded-full hover:bg-indigo-500 hover:scale-110 transition ease-wiggle duration-500 "
             {...(item.download && { download: true })}
           >
             {item.icon}

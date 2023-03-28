@@ -1,5 +1,4 @@
-import React from "react";
-import { Route, Routes } from "react-router";
+import circle from "../assets/icons/circle-scatter-haikei.svg";
 import Footer from "../Components/Footer";
 import About from "./About";
 import Contact from "./Contact";
@@ -12,32 +11,20 @@ import Skills from "./Skills";
 
 const Main = () => {
   return (
-    // <Routes>
-    //   <Route path="/">
-    //     <Route
-    //       index
-    //       element={
-    //         <main className="lg:ml-28  ">
-    //           <Home />
-    //         </main>
-    //       }
-    //     ></Route>
-    //     <Route path="about" element={<About />}></Route>
-    //     <Route path="facts" element={<Facts />}></Route>
-    //   </Route>
-    <main className="lg:ml-28  ">
-      <Home />
-      <About />
-      <Facts />
-      <Skills />
-      <Resume />
-      <Portfolio />
-      <Services />
-      <Contact />
-      <Footer />
-    </main>
-
-    // </Routes>
+    <>
+      <img src={circle} alt="" className="h-screen w-screen fixed opacity-20" />
+      <main className="lg:ml-28  bg-white-500 bg-clip-padding backdrop-filter backdrop-blur-[100px] bg-opacity-10  ">
+        <Home />
+        <About />
+        <Facts />
+        <Skills />
+        <Resume />
+        <Portfolio />
+        <Services />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   );
 };
 

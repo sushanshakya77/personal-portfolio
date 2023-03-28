@@ -46,7 +46,7 @@ const About = () => {
   const [animation, setAnimation] = React.useState(false);
   return (
     <Section _id="about">
-      <div className="w-full mx-auto">
+      <div className="w-full mx-auto space-y-9 ">
         <Title
           title="About"
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
@@ -94,7 +94,7 @@ const About = () => {
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <polyline points="9 6 15 12 9 18" />
-                    </svg>{" "}
+                    </svg>
                     {item.title}:{"   "}
                     <span className="text-base font-normal ml-2">
                       {item.info}

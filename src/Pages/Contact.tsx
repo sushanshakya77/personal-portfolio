@@ -112,7 +112,7 @@ const Contact = () => {
             />
           </div>
           <div className="flex justify-center  w-full">
-            <button className="bg-[#4f46e5] text-slate-100 text-lg p-3 rounded-full w-1/3 hover:scale-105 ease-in-out transition-all duration-300  ">
+            <button className="bg-[#4f46e5] text-slate-100 text-lg p-3 rounded-full w-1/3 hover:scale-105 ease-wiggle transition-all duration-500  ">
               Send Message
             </button>
           </div>

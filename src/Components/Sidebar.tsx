@@ -1,5 +1,5 @@
 import cross from "../assets/svg/cross.svg";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router";
 const buttonContent = [
   {
@@ -138,15 +138,10 @@ const Sidebar = () => {
   const location = useLocation();
   const [open, setOpen] = React.useState(false);
 
-  console.log(
-    location.hash,
-    buttonContent.map((h) => h.href)
-  );
-
   return (
     <header
-      className={`flex flex-col h-screen transition-all ease-in-out duration-500 justify-center fixed top-0 bottom-0 left-0 max-lg:border-[1px] max-lg:w-[300px] max-lg:bg-white z-50 overflow-y-auto   ${
-        open ? "-left-80" : ""
+      className={`flex flex-col h-screen transition-all ease-in-out duration-500 justify-center fixed top-0 bottom-0 left-0 max-lg:border-[1px] max-lg:w-[300px]  max-lg:bg-white z-50 overflow-y-auto bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 ${
+        open ? "-left-[300px]" : ""
       } `}
     >
       <button
@@ -190,7 +185,10 @@ const Sidebar = () => {
           </svg>
         )}
       </button>
-      <button className="lg:hidden bg-indigo-700 h-9 w-9 rounded-full fixed bottom-3 right-3 stroke-white justify-center items-center flex">
+      <button
+        className="lg:hidden bg-indigo-700 h-9 w-9 rounded-full fixed bottom-3 right-3 stroke-white justify-center items-center flex"
+        onClick={() => window.scrollTo(0, 0)}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="icon icon-tabler icon-tabler-arrow-up "

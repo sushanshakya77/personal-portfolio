@@ -270,10 +270,10 @@ const Services = () => {
         title="Services"
         description="Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."
       />
-      <div className="flex flex-wrap  ">
+      <div className="flex flex-wrap gap-5 ">
         {services.map((item) => (
           <div
-            className={`shadow-[0px_5px_90px_0px_rgba(110,123,131,0.05)] bg-white  rounded-md py-14 px-4 space-y-1 hover:drop-shadow-xl transition-all duration-500 mt-4 mr-4 ease-in-out w-[32%] max-lg:w-[45%] max-sm:w-full  `}
+            className={`shadow-[0px_5px_90px_0px_rgba(110,123,131,0.05)] bg-white  rounded-md py-14 px-4 space-y-1 hover:drop-shadow-xl transition-all duration-500  ease-in-out w-[30%] max-lg:w-[45%] max-sm:w-full  `}
             key={item.title}
           >
             <a

@@ -118,7 +118,7 @@ export const socialMedia = [
 const Home = () => {
   return (
     <section
-      className="h-screen bg-[#fff] flex max-lg:relative items-center lg:pl-16  text-center z-96  "
+      className="h-screen  flex relative items-center lg:pl-16  text-center z-96  "
       id="home"
     >
       <img
@@ -127,7 +127,7 @@ const Home = () => {
         className="lg:hidden h-screen w-screen object-cover opacity-10 absolute top-0"
       />
       <div className="flex flex-col justify-center lg:text-start text-center space-y-4 w-screen lg:w-2/4  ">
-        <h1 className=" text-slate-600  lg:text-7xl text-4xl font-extrabold font-sans-serif">
+        <h1 className=" text-slate-600  lg:text-7xl text-4xl font-bold ">
           Sushan Shakya
         </h1>
         <h3 className=" text-slate-600 lg:text-2xl text-lg ">
@@ -140,7 +140,7 @@ const Home = () => {
               key={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="stroke-[#5e5c5c] hover:stroke-indigo-600 group hover:scale-110 transition ease-in-out duration-200 "
+              className="stroke-[#5e5c5c] hover:stroke-indigo-600 group hover:scale-110 transition ease-wiggle duration-700 "
               {...(item.download && { download: true })}
             >
               {item.icon}
@@ -153,7 +153,7 @@ const Home = () => {
       </div>
       <div className="grow" />
       <div className="flex flex-col h-full w-2/4 absolute top-0 right-0 transition-all duration-200 ease-in-out ">
-        <div className="bg-indigo-600 h-full clip-path max-lg:invisible" />
+        {/* <div className="bg-indigo-600 h-full fancy-border-radius max-lg:invisible" /> */}
         <div className="absolute top-0 right-10">
           <img
             className="h-screen object-cover max-lg:hidden "
