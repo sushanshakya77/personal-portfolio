@@ -149,14 +149,10 @@ const Home = () => {
         </div>
       </div>
       <div className="grow" />
-      <div className="flex flex-col h-full w-2/4 absolute top-0 right-0 transition-all duration-200 ease-in-out ">
+      <div className="flex flex-col h-full w-2/4 absolute top-0 right-0 transition-all duration-200 ease-in-out max-lg:hidden ">
         {/* <div className="bg-indigo-600 h-full fancy-border-radius max-lg:invisible" /> */}
         <div className="absolute top-[28%] right-48 border-[10px] rounded-full fancy-border-radius border-purple-500 h-[340px] w-[340px] overflow-hidden">
-          <img
-            className="object-cover max-lg:hidden "
-            src={potrait2}
-            alt="bg"
-          />
+          <img className="object-cover  " src={potrait2} alt="bg" />
         </div>
       </div>
     </section>

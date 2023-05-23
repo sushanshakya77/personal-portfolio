@@ -22,7 +22,6 @@ const buttonContent = [
         <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
       </svg>
     ),
-    active: "bg-indigo-700",
     href: "#home",
   },
   {
@@ -134,18 +133,19 @@ const buttonContent = [
     href: "#contact",
   },
 ];
+
 const Sidebar = () => {
   const location = useLocation();
   const [open, setOpen] = React.useState(false);
 
   return (
     <header
-      className={`flex flex-col h-screen transition-all ease-in-out duration-500 justify-center fixed top-0 bottom-0 left-0 max-lg:border-[1px] max-lg:w-[300px]  max-lg:bg-white z-50 overflow-y-auto bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 ${
-        open ? "-left-[300px]" : ""
+      className={`flex flex-col h-screen transition-all ease-in-out duration-500 justify-center fixed top-0 bottom-0  max-lg:border-[1px] max-lg:w-[300px]  max-lg:bg-white z-50 overflow-y-auto   ${
+        open ? "-left-[300px]" : "left-0"
       } `}
     >
       <button
-        className={`lg:hidden h-10 w-10 rounded-full fixed top-3 right-3 stroke-white flex justify-center items-center transition-all duration-300 ease-in-out ${
+        className={`lg:hidden h-10 w-10 rounded-full fixed top-3 right-3 stroke-white flex justify-center items-center transition-all duration-1000 ease-in-out ${
           open ? "bg-transparent" : "bg-indigo-600"
         }`}
         onClick={() => setOpen(!open)}
@@ -212,8 +212,8 @@ const Sidebar = () => {
             <a
               key={content.title}
               className={`flex group max-w-full hover:max-w-full lg:max-w-[55px] lg:max-h-[54px] transition-all ease-in-out duration-500 space-x-2  rounded-full p-4   hover:bg-indigo-600  hover:stroke-white   justify-center items-center ${
-                location.hash === content.href
-                  ? "bg-indigo-600 stroke-white"
+                location?.hash === content?.href
+                  ? "bg-indigo-600 stroke-white text-white"
                   : "bg-slate-100 stroke-gray-700"
               } `}
               href={content.href}

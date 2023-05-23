@@ -43,16 +43,15 @@ const firstInfo = [
 ];
 
 const About = () => {
-  const [animation, setAnimation] = React.useState(false);
   return (
     <Section _id="about">
       <div className="w-full mx-auto space-y-9 ">
         <Title
           title="About"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
-          saepe numquam. Iusto, a voluptatibus, delectus architecto quia vitae
-          animi facere quo assumenda earum cupiditate. Est iste eveniet at
-          tenetur quae."
+          description={`I am a web developer/mobile developer with around ${dayjs().diff(
+            "2021-09-01",
+            "year"
+          )} year of experience. I create dynamic, responsive, and intuitive web applications using modular and reusable code. My passion is to build high-quality, cutting-edge web applications.`}
         />
         <div className="flex space-x-6 ">
           <div className="flex-none h-full w-[416px] overflow-hidden ">
