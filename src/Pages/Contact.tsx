@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../Components/Input";
 import Section from "../Components/Section";
 import Title from "../Components/Title";
@@ -24,6 +24,24 @@ const contactDetails = [
         <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
       </svg>
     ),
+    hoverLogo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="icon icon-tabler icon-tabler-map-pin"
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="#ffffff"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+      </svg>
+    ),
   },
   {
     title: "Email",
@@ -43,6 +61,24 @@ const contactDetails = [
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <rect x="3" y="5" width="18" height="14" rx="2" />
         <polyline points="3 7 12 13 21 7" />
+      </svg>
+    ),
+    hoverLogo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="icon icon-tabler icon-tabler-mail"
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="#ffffff"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+        <path d="M3 7l9 6l9 -6" />
       </svg>
     ),
   },
@@ -67,10 +103,31 @@ const contactDetails = [
         <line x1="12" y1="17" x2="12" y2="17.01" />
       </svg>
     ),
+    hoverLogo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="icon icon-tabler icon-tabler-device-mobile"
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="#ffffff"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z" />
+        <path d="M11 4h2" />
+        <path d="M12 17v.01" />
+      </svg>
+    ),
   },
 ];
 
 const Contact = () => {
+  const [hover, setHover] = useState("");
+
   return (
     <Section _id="contact">
       <Title title="Contact" />
@@ -80,8 +137,12 @@ const Contact = () => {
             {contactDetails.map((contact) => (
               <div className="w-full flex  " key={contact.title}>
                 <div className="w-1/5 flex justify-center items-center">
-                  <div className=" bg-teal-200 rounded-full transition-all duration-300 ease-in-out w-11 h-11 flex justify-center items-center hover:stroke-neutral-100 hover:bg-[#0563BB]">
-                    {contact.logo}
+                  <div
+                    className=" bg-teal-200 rounded-full transition-all duration-300 ease-in-out w-11 h-11 flex justify-center items-center hover:stroke-neutral-100 hover:bg-[#0563BB]"
+                    onMouseEnter={() => setHover(contact.title)}
+                    onMouseLeave={() => setHover("")}
+                  >
+                    {hover === contact.title ? contact.hoverLogo : contact.logo}
                   </div>
                 </div>
                 <div className="w-4/5">

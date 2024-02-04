@@ -1,9 +1,8 @@
 import dayjs from "dayjs";
-import React from "react";
 import relativeTime from "dayjs/plugin/relativeTime";
-import potrait1 from "../assets/images/easy.gif";
 import Section from "../Components/Section";
 import Title from "../Components/Title";
+import potrait1 from "../assets/images/easy.gif";
 
 dayjs.extend(relativeTime);
 
